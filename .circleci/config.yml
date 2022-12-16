@@ -225,7 +225,6 @@ jobs:
             sudo ./aws/install
 
 
-
       - run:
           name: Run migrations
           command: |
