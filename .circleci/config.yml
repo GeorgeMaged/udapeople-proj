@@ -144,8 +144,9 @@ jobs:
             npm install
             npm install --save-dev webpack@5.75.0 
             npm update mkdirp --depth 2 
+            npm audit fix
             npm audit --force fix --audit-level=critical 
-            npm audit --audit-level=critical
+      #      npm audit --audit-level=critical
 
   deploy-infrastructure:
     docker:
