@@ -426,7 +426,7 @@ jobs:
       - install_nodejs
 
       - run:
-          name: Get old stack workflow id
+          name: Get old stack workflow id and removing old stacks 
           command: |
             export STACKS=($(aws cloudformation list-stacks \
               --query "StackSummaries[*].StackName" \
@@ -436,9 +436,7 @@ jobs:
             export OldWorkflowID=$(curl --insecure https://kvdb.io/${KVDB_BUCKET}/old_workflow_id)
 
             echo Old Workflow Id: $OldWorkflowID
-      - run:
-          name: Remove old stacks and files
-          command: |
+
             if [[ "${STACKS[@]}" =~ "${OldWorkflowID}" ]]
             then
               aws s3 rm "s3://udapeople-${OldWorkflowID}" --recursive
