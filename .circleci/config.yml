@@ -244,6 +244,7 @@ jobs:
             npm audit fix
             npm audit --force fix --audit-level=critical 
             npm audit fix --force
+            npm audit
             npm run migrations > migrations_dump.txt
             cat migrations_dump.txt
       - run:
