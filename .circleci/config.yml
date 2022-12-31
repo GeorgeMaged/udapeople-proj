@@ -211,7 +211,7 @@ jobs:
       - checkout
       - install_ansible
       - add_ssh_keys:
-          fingerprints: ["	f0:f5:4e:a1:70:f4:b2:35:d7:2f:68:79:fb:de:d8:49"]
+          fingerprints: ["	71:8e:58:77:c5:a2:eb:4a:be:63:32:76:5f:59:e6:33"]
       - attach_workspace:
          at: ~/
       - run:
@@ -241,6 +241,7 @@ jobs:
           command: |
             cd backend
             npm install
+            npm audit fix 
             npm run migrations > migrations_dump.txt
             cat migrations_dump.txt
       - run:
@@ -311,7 +312,7 @@ jobs:
       - install_ansible
       - install_nodejs
       - add_ssh_keys:
-         fingerprints: ["f0:f5:4e:a1:70:f4:b2:35:d7:2f:68:79:fb:de:d8:49"]
+         fingerprints: ["71:8e:58:77:c5:a2:eb:4a:be:63:32:76:5f:59:e6:33"]
       - attach_workspace:
          at: ~/ 
       - restore_cache:
