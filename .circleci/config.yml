@@ -241,7 +241,7 @@ jobs:
           command: |
             cd backend
             npm install
-            npm install class-validator --save
+            #npm install class-validator --save
             npm audit fix
             npm audit --force fix --audit-level=critical 
             npm audit fix --force
