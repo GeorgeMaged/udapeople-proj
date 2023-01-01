@@ -242,7 +242,7 @@ jobs:
             cd backend
             
             npm install
-            npm cache clean 
+            npm cache clean --force
             npm audit fix
             npm audit --force fix --audit-level=critical 
             npm audit fix --force
