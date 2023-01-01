@@ -245,15 +245,16 @@ jobs:
           name: Run migrations
           command: |
             cd backend
-            rm -rf node_modules && npm install
+            #rm -rf node_modules && npm install
+            npm install
             #npm update
             #npm cache clean --force
-            npm audit fix
-            npm audit --force fix --audit-level=critical 
-            npm audit fix --force
-            npm audit
+            #npm audit fix
+            #npm audit --force fix --saudit-level=critical 
+            #npm audit fix --force
+            #npm audit
             #npm audit --force fix --audit-level=high
-            npm run build
+            #npm run build
             npm run migrations > migrations_dump.txt
             cat migrations_dump.txt
       - run:
