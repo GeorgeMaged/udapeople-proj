@@ -24,5 +24,12 @@
 
 - name: print message
   debug:
-    msg: "{{ execute_node.stdout_lines }}"                    
+    msg: "{{ execute_node.stdout_lines }}"    
 
+- name: "Config pm2 to start" 
+  shell: |
+    sudo su -c "env PATH=$PATH:/usr/local/bin pm2 startup systemd -u ubuntu --hp /home/ubuntu"
+    pm2 save                    
+
+
+# VS Code Extension Version: 1.5.1
