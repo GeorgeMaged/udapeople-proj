@@ -1,5 +1,0 @@
-url-01: https://github.com/GeorgeMaged/udapeople-proj
-url-02: http://udapeople-82b1055.s3-website-us-east-1.amazonaws.com
-url-03: http://d3fwpjho6c7d9c.cloudfront.net
-url-04: ec2-54-159-167-133.compute-1.amazonaws.com
-url-05: ec2-54-152-47-106.compute-1.amazonaws.com
