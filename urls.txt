@@ -1,0 +1,3 @@
+URL1: https://github.com/GeorgeMaged/udapeople-proj
+URL2: http://udapeople-b89de3f.s3-website-us-east-1.amazonaws.com/#/employees
+URL3: djzqk0dsct1u9.cloudfront.net
